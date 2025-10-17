@@ -2,6 +2,7 @@ package itm.oss;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import org.junit.jupiter.api.DisplayName;
@@ -16,6 +17,12 @@ class CalculatorTest {
     @DisplayName("Test for function add")
     void testAdd() {
         assertEquals(10, calc.add(5, 5), "5 + 5 should be 10");
+    }
+
+    @Test
+    @DisplayName("Failing test for function sub")
+    void testSubtractFail() {
+        assertEquals(0, calc.subtract(6, 5), "6 - 5 should be 1, not 0");
     }
 
     @Test
