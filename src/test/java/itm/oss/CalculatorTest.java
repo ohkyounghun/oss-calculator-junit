@@ -19,7 +19,6 @@ class CalculatorTest {
         assertEquals(10, calc.add(5, 5), "5 + 5 should be 10");
     }
 
-   
 
     @Test
     @DisplayName("Testing function isPrime with 5")
